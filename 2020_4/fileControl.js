@@ -1,5 +1,8 @@
 // 系统模块 fs 文件操作
 const fs = require('fs');
+// 1.通过模块的名字 fs 对模块进行引用
+// 2.通过模块内部的 readFile 方法读取文件内容
+
 
 // 读取文件内容 语法
 // 文件参数中若有 [], 说明这个参数为可选参数
@@ -15,6 +18,20 @@ fs.readFile('./a.js', 'utf-8', (err, doc) => {
     // doc 参数为文件内容
     if (err == null) {
         // 在控制台输出文件内容
+        console.log(err);
         console.log(doc);
     }
+});
+
+// 写入文件内容方法
+// fs.writeFile('文件路径/文件名称', '数据', callback);
+const content = '<h3>正在使用 fs.writeFile 写入文件内容</h3>';
+fs.writeFile('./index.html', content, err => {
+    if (err != null) {
+        // 如果文件写入失败
+        console.log(err);
+        return;
+    }
+
+    console.log('文件写入成功');
 });

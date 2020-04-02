@@ -32,3 +32,5 @@ exports = {
 // module.exports 与 exports 导出对象的区别:
 // exports 是 module.exports 的别名(地址引用关系)，导出对象最终以 module.exports 为准
 // 当 exports 对象和 module.exports 对象指向的不是同一个对象时， 以module.exports 为准
+
+console.log('文件被修改了');
